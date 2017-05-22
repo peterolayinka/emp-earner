@@ -4210,22 +4210,36 @@ ul.notifications {
 }
 .receipt-sender,
 .receipt-receipient {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.2;
+    position: relative;
+}
+.receipt-sender {
+    right: 50px;
+}
+.receipt-receipient {
+    left: 20px;
 }
 .receipt-sender:after,
-.receipt-amount:after {
+.receipt-receipient:after {
     font-family: "FontAwesome";
     content: "\f105";
     position: absolute;
-    right: 10px;
     top: 0;
     font-size: 30px;
     font-weight: bold;
 }
+.receipt-sender:after {
+    right: 0;
+}
+.receipt-receipient:after {
+    left: -10px;
+}
 
 .receipt-amount {
     font-size: 25px;
+    position: relative;
+    left: -25px;
 }
 .receipt-date {
     position: absolute;
@@ -4233,7 +4247,9 @@ ul.notifications {
     left: 230px;
 }
 .receipt-detail {
-    margin-top: 9px;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
 }
 .message-board {
     background: #fff;
@@ -4241,7 +4257,10 @@ ul.notifications {
     text-align: center;
     padding: 0 25px;
     position: relative;
-    height: 185px;
+    min-height: 210px;
+}
+.message-board h4 {
+    margin-bottom: 20px;
 }
 .message-slide__left,
 .message-slide__right {
@@ -4270,6 +4289,15 @@ ul.notifications {
     position: absolute;
     top: 45%;
 }
+.message_next,
+.message_prev {
+    cursor: pointer;
+    opacity: 1;
+}
+.message_next:hover,
+.message_prev:hover {
+    background: #e6e6e6;
+}
 .task-board {
     background: #fff;
     border: 1px solid #E6E9ED;
@@ -4278,6 +4306,9 @@ ul.notifications {
     margin: 0;
     padding: 10px;
     border-bottom: 1px solid #E6E9ED;
+}
+.task-board__header i {
+    padding: 0;
 }
 .task-board__counter {
     display: block;
@@ -4480,4 +4511,17 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 
 .profile_img img {
     margin: 0 auto;
+}
+#modal {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    z-index: 9;
+}
+.modal-box {
+    margin: 0 auto;
+    width: 80%;
+}
+.modal-box .x_panel {
+    display: none;
 }

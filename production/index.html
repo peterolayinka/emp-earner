@@ -25,6 +25,10 @@
     <!-- bootstrap-daterangepicker -->
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
+    <!-- Owl Carousel Style -->
+    <link href="../build/css/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../build/css/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="../build/css/owl-carousel/owl.transitions.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
   </head>
@@ -223,9 +227,9 @@
           <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="buttons">
-                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Create Dream</button>
+                <button type="button" class="btn btn-primary btn-lg crDreamView"><i class="fa fa-plus"></i> Create Dream</button>
                 <button type="button" class="btn btn-warning btn-lg"><i class="fa fa-circle-o-notch"></i> Re-CAD</button>
-                <button type="button" class="btn btn-success btn-lg"><i class="fa fa-check"></i> Claim Dream</button>
+                <button type="button" class="btn btn-success btn-lg clDreamView"><i class="fa fa-check"></i> Claim Dream</button>
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -240,7 +244,7 @@
               <div class="x_panel bg-receipt">
                 <div class="receipt">
                   <h4 class="clearfix text-center receipt-header">Recipient confirmed request to provide help
-                    <span class="pull-right btn btn-default">Message &nbsp;&nbsp;&nbsp;
+                    <span class="pull-right btn btn-default jsMessageView">Message &nbsp;&nbsp;&nbsp;
                       <span>
                         <span class="text-danger" style="font-weight: bold">1</span>/<span>1</span>
                       </span>
@@ -275,7 +279,7 @@
                       <strong style="font-size: 20px;">2016-11-22</strong>
                     </div>
                     <div class="pull-right receipt-detail">
-                      <span class="btn btn-default">Detail <i class="fa fa-angle-double-right"></i></span>
+                      <span class="btn btn-default jsMessageDetail">Detail <i class="fa fa-angle-double-right"></i></span>
                     </div>
                   </div>
                 </div>
@@ -285,15 +289,26 @@
               <div class="col-md-6 col-sm-6 col-xs-12 ">
                 <div class="x_panel message-board">
                   <h4>Message Board</h4>
-                  <span class="message-slide__left"><i class="fa fa-long-arrow-right"></i></span>
-                    <i class="fa fa-bullhorn fa-4x"></i><br>
-                    <p>Please be informed that server 3 will be offline from <strong>3:00 AM</strong> to <strong>4:00 AM</strong></p>
-                  <span class="message-slide__right"><i class="fa fa-long-arrow-left"></i></span>
+                  <span class="message-slide__left message_prev"><i class="fa fa-long-arrow-right"></i></span>
+                    <div id="message_slide" class="owl-carousel">
+                      <div>
+                        <i class="fa fa-bullhorn fa-4x"></i><br>
+                        <p>Please be informed that server 3 will be offline from <strong>3:00 AM</strong> to <strong>4:00 AM</strong></p>
+                      </div>
+                      <div>
+                        <i class="fa fa-bullhorn fa-4x"></i><br>
+                        <p>Please be informed that server 3 will be offline from <strong>3:00 AM</strong> to <strong>4:00 AM</strong></p>
+                      </div>
+                      <p>Please be informed that server 3 will be offline from <strong>3:00 AM</strong> to <strong>4:00 AM</strong></p>
+                      <p>Please be informed that server 3 will be offline from <strong>3:00 AM</strong> to <strong>4:00 AM</strong></p>
+                    </div>
+                  <span class="message-slide__right message_next"><i class="fa fa-long-arrow-left"></i></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12 ">
                 <div class="x_panel task-board">
-                  <h4 class="clearfix text-center task-board__header"><i class="pull-left fa fa-list"></i> Task Coding... <i class="pull-right fa fa-repeat"></i></h4>
+                  <h4 class="clearfix text-center task-board__header">
+                  <i class="pull-left fa fa-list btn"></i> Task Coding... <i class="pull-right fa fa-repeat btn"></i></h4>
                   <div class="task-board__body">
                     <div class="">
                       <ul class="task-board__counter">
@@ -373,7 +388,7 @@
 
 
             <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
+              <div class="x_panel tile">
                 <div class="x_title">
                   <h2>Latest Phs</h2>
                   <ul class="nav navbar-right panel_toolbox">
@@ -381,12 +396,7 @@
                     </li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
+                      
                     </li>
                     <li><a class="close-link"><i class="fa fa-close"></i></a>
                     </li>
@@ -394,50 +404,151 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <ul>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                  </ul>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
+              <div class="x_panel tile">
                 <div class="x_title">
                   <h2>Latest Ghs</h2>
-                  <ul class="nav navbar-right panel_toolbox">
+                  <ul class="nav navbar-right panel_toolbox scroll-view">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
+                      
                     </li>
                     <li><a class="close-link"><i class="fa fa-close"></i></a>
                     </li>
                   </ul>
                   <div class="clearfix"></div>
                 </div>
-                <div class="x_content">
-                  <ul>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                  </ul>
+                <div class="x_content ">
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
+              <div class="x_panel tile">
                 <div class="x_title">
                   <h2>Testimonies</h2>
                   <ul class="nav navbar-right panel_toolbox">
@@ -445,26 +556,74 @@
                     </li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
+                      
                     </li>
                     <li><a class="close-link"><i class="fa fa-close"></i></a>
                     </li>
                   </ul>
                   <div class="clearfix"></div>
                 </div>
-                <div class="x_content">
-                  <ul>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                  </ul>
+                <div class="x_content scroll-view">
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="media event">
+                    <a class="pull-left date">
+                      <p class="month">April</p>
+                      <p class="day">23</p>
+                    </a>
+                    <div class="media-body">
+                      <a class="title" href="#">Ms. Mary Jane</a>
+                      <p><strong>N2300. </strong> Agent Avarage Sales </p>
+                      <p><small>12 Sales Today</small>
+                      </p>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
@@ -473,7 +632,96 @@
 
         </div>
         <!-- /page content -->
-
+        <div id="modal">
+          <div class="modal-box" id="messageViewBox">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Message <small>View messages</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                </div>
+              </div>
+            </div>
+          </div>          
+          <div class="modal-box" id="messageDetailBox">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Weekly Summary <small>Activity shares</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                </div>
+              </div>
+            </div>
+          </div>          
+          <div class="modal-box" id="crBox">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Create Dreams <small>build your dream</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                </div>
+              </div>
+            </div>
+          </div>          
+          <div class="modal-box" id="clBox">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Claim Dream <small>Actualize your dream</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
         <!-- footer content -->
         <footer>
           <div class="pull-right">
@@ -524,7 +772,10 @@
     <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="../build/js/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.js"></script>
+    <script src="../build/js/script.js"></script>
 
   </body>
 </html>

@@ -171,7 +171,8 @@ $(document).ready(function() {
     $('.close-link').click(function () {
         var $BOX_PANEL = $(this).closest('.x_panel');
 
-        $BOX_PANEL.remove();
+        // $BOX_PANEL.remove();
+        $BOX_PANEL.hide();
     });
 });
 // /Panel toolbox
