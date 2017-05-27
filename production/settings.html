@@ -224,12 +224,12 @@
         <div class="right_col" role="main">
           <!-- top tiles -->
            <div class="row content-header">
-            <h3>Profile
-              <small>Edit Profile</small>
+            <h3>Settings
+              <small>Tweak your account</small>
             </h3>
             <ol class="breadcrumb">
               <li><a href="index.html"><i class="fa fa-dashboard"></i> Home</a></li>
-              <li class="active">Edit profile</li>
+              <li class="active">settings</li>
             </ol>
           </div>
 
@@ -244,55 +244,19 @@
           <!-- /top tiles -->
           <div class="clearfix"></div>
 
-          <form class="form-horizontal form-label-left input_mask x_panel">
+          <div>
+          	<form class="form-horizontal form-label-left input_mask x_panel">
               <div class="row">
-                <h3>PERSONAL DETAILS</h3>
+                <h3>CHANGE PASSWORD</h3>
 
                 <div class="form-group has-feedback">
-                  <label for="username">First Name:</label>
-                  <input type="text" class="form-control has-feedback-left" id="f_name" placeholder="First Name">
-                  <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  <label id="password">Currrent Password:</label>
+                  <input type="password" class="form-control has-feedback-left" id="password" placeholder="Your Password">
+                  <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
                 <div class="form-group has-feedback">
-                  <label for="username">Last Name:</label>
-                  <input type="text" class="form-control has-feedback-left" id="l_name" placeholder="Last Name">
-                  <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                </div>
-
-                <div class="form-group has-feedback">
-                  <label for="username">Address:</label>
-                  <input type="text" class="form-control has-feedback-left" id="address" placeholder="address">
-                  <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
-                </div>
-
-                
-                <div class="form-group has-feedback">
-                  <label for="username">Date of Birth:</label>
-                  <input type="text" class="form-control has-feedback-left" data-inputmask="'mask': '99/99/9999'" id="address" placeholder="99/99/9999">
-                  <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
-                </div>
-
-                <div class="form-group has-feedback">
-                  <label id="email">Phone:</label>
-                  <input type="email" class="form-control has-feedback-left" id="email" placeholder="Your Username">
-                  <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
-                </div>
-
-                <div class="form-group has-feedback">
-                  <label id="email">Email:</label>
-                  <input type="email" class="form-control has-feedback-left" id="email" placeholder="Your Username">
-                  <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                </div>
-
-                <div class="form-group has-feedback">
-                  <label id="pro_picture">Profile Picture:</label>
-                  <input type="file" class="form-control has-feedback-left" id="pro_picture">
-                  <span class="fa fa-file-archive-o form-control-feedback left" aria-hidden="true"></span>
-                </div>               
-
-                <div class="form-group has-feedback">
-                  <label id="password">Password:</label>
+                  <label id="password">New Password:</label>
                   <input type="password" class="form-control has-feedback-left" id="password" placeholder="Your Password">
                   <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span>
                 </div>
@@ -305,77 +269,63 @@
 
               </div>
 
+            <hr>
+            <div class="form-group">
+              <button type="submit" class="btn brn-small btn-success"><i class="fa fa-save"></i> Change Password</button>
+            </div>
+          </form>	
+          </div>
+          
+          <div>
+          	<form class="form-horizontal form-label-left input_mask x_panel">
               <div class="row">
-                <h3>Skills Aquisition:</h3>
-                <div>
-                  <label for="tags_1">choose a skill:</label>
-                  <div class="control-group" style="clear: both; position: relative;">
-                  <div style="clear: both">
-                    <input id="tags_1" type="text" class="tags form-control" value="cooking, singing, reading" />
-                    <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
-                  </div>
-                </div>  
-                </div>
-                <div class="clearfix"></div>
-              </div>
-
-              <div class="row">
-                <h3>Link Accounts:</h3>
-                <div>
-                  <a class="btn btn-xs btn-app">
-                      <span class="badge bg-red"><i class="fa fa-close"></i></span>
-                      <i class="fa fa-facebook"></i> Facebook
-                    </a>
-                  <a class="btn btn-xs btn-app">
-                      <span class="badge bg-red"><i class="fa fa-close"></i></span>
-                      <i class="fa fa-twitter"></i> Twitter
-                    </a>
-                </div>
-                <div>
-                  <button type="button" class="btn btn-round btn-default"><i class="fa fa-plus"></i> Facebook</button> 
-                  <button type="button" class="btn btn-round btn-default"><i class="fa fa-plus"></i> Twitter</button> 
-                </div>
-                <div class="clearfix"></div>
-              </div>
-
-              <div class="row">
-          	    <h3>MANAGER DETAILS</h3>
+                <h3>PHONE VERIFICATION </h3>
+                <p class="text-muted well well-sm">Your phone is not verified, kindly verify now!!!</p>
 
                 <div class="form-group has-feedback">
-                  <label for="username">Full Name:</label>
-                  <input type="text" class="form-control has-feedback-left" id="f_name" value="John Doe" disabled="">
-                  <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                </div>
-
-                <div class="form-group has-feedback">
-                  <label for="username">Phone:</label>
-                  <input type="text" class="form-control has-feedback-left" id="l_name" value="+234-706-477-9197" disabled="">
+                  <label id="password1">Phone: </label>
+                  <input type="text" class="form-control has-feedback-left" id="password1" placeholder="Enter Phone Number">
                   <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
+              </div>
+
+            <hr>
+            <div class="form-group">
+              <button type="submit" class="btn brn-small btn-success"><i class="fa fa-save"></i> Verify</button>
+            </div>
+          </form>
+          </div>
+
+           <div>
+          	<form class="form-horizontal form-label-left input_mask x_panel">
+              <div class="row">
+                <h3>SECURITY QUESTION </h3>
+                <p class="text-muted well well-sm">By setting a security question, you will add a new layer of protection to your account</p>
+
                 <div class="form-group has-feedback">
-                  <label id="email">Email:</label>
-                  <input type="email" class="form-control has-feedback-left" id="email" value="Johndoe@gmail.com" disabled="">
-                  <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                  <label id="password1">Security Question: </label>
+                  <input type="text" class="form-control has-feedback-left" id="password1" placeholder="What is my middle name">
+                  <span class="fa fa-question form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
-                <hr>
-                <div class="form-group">
-                  <button type="submit" class="btn brn-small btn-success"><i class="fa fa-save"></i> Save</button>
+                <div class="form-group has-feedback">
+                  <label id="password1">Answer: </label>
+                  <input type="text" class="form-control has-feedback-left" id="password1" placeholder="Yeanke ">
+                  <span class="fa fa-reply form-control-feedback left" aria-hidden="true"></span>
                 </div>
 
               </div>
 
+            <hr>
+            <div class="form-group">
+              <button type="submit" class="btn brn-small btn-success"><i class="fa fa-save"></i> Set Question</button>
+            </div>
           </form>
-
-          <div class="col-md-6 col-xs-12">
-                    <br />
-                    <form class="">
-
-                      
-
-                    </form>
           </div>
+
+          </div>
+          
 
         </div>
         <!-- /page content -->

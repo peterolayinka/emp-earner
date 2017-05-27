@@ -67,32 +67,35 @@
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Personal Office <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="gh-history.html">PH History</a></li>
-                      <li><a href="gh-history.html">GH History</a></li>
                       <li><a href="#">Dream Growth</a></li>
+                      <li><a href="gh-history.html">PH &amp; GH History</a></li>
                       <li><a href="referral.html">Referral</a></li>
-                      <li><a href="account.html">Account</a></li>
+                      <!-- <li><a href="account.html">Account</a></li> -->
                       <li><a href="#">Letter of Happiness</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-certificate"></i> Skill Acquisition <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#">Skill Academy</a></li>
+                      <li><a href="#">Fm &amp; E Network</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-info-circle"></i> Infromation <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="news.html">News</a></li>
-                      <li><a href="#">Official Information</a></li>
+                      <!-- <li><a href="#">Official Information</a></li> -->
+                      <li><a href="faq.html">Terms &amp; Conditions</a></li>
                       <li><a href="faq.html">FAQ</a></li>
-                      <li><a href="#">Bitcoin</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-envelope"></i> Support <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+                      <li><a href="support.html?sp=gdept">General Dept.</a></li>
                       <li><a href="support.html?sp=fpop">Fake POP Dept.</a></li>
                       <li><a href="support.html?sp=cdept">Confirmation Dept.</a></li>
-                      <li><a href="support.html?sp=gdept">General Dept.</a></li>
+                      <li><a href="support.html?sp=cdept">Billing Dept.</a></li>
+                      <li><a href="support.html?sp=cdept">Fm &amp; E  Dept.</a></li>
+                      <li><a href="support.html?sp=cdept">Abuse Dept.</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -131,10 +134,11 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
+                    <li><a href="profile.html"> Profile</a></li>
+                    <li><a href="account.html"> Account</a></li>
                     <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
+                      <a href="settings.html">
+                        <!-- <span class="badge bg-red pull-right">50%</span> -->
                         <span>Settings</span>
                       </a>
                     </li>
@@ -227,9 +231,9 @@
           <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="buttons">
-                <button type="button" class="btn btn-primary btn-lg crDreamView"><i class="fa fa-plus"></i> Create Dream</button>
-                <button type="button" class="btn btn-warning btn-lg"><i class="fa fa-circle-o-notch"></i> Re-CAD</button>
-                <button type="button" class="btn btn-success btn-lg clDreamView"><i class="fa fa-check"></i> Claim Dream</button>
+                <button type="button" class="btn btn-primary btn-lg crDreamView" data-toggle="modal" data-target=".crBox"><i class="fa fa-plus"></i> Create Dream</button>
+                <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target=".reCad"><i class="fa fa-circle-o-notch"></i> Re-CAD</button>
+                <button type="button" class="btn btn-success btn-lg clDreamView" data-toggle="modal" data-target=".clBox"><i class="fa fa-check"></i> Claim Dream</button>
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -244,7 +248,7 @@
               <div class="x_panel bg-receipt">
                 <div class="receipt">
                   <h4 class="clearfix text-center receipt-header">Recipient confirmed request to provide help
-                    <span class="pull-right btn btn-default jsMessageView">Message &nbsp;&nbsp;&nbsp;
+                    <span class="pull-right btn btn-default jsMessageView" data-toggle="modal" data-target=".messsageViewBox">Message &nbsp;&nbsp;&nbsp;
                       <span>
                         <span class="text-danger" style="font-weight: bold">1</span>/<span>1</span>
                       </span>
@@ -279,7 +283,7 @@
                       <strong style="font-size: 20px;">2016-11-22</strong>
                     </div>
                     <div class="pull-right receipt-detail">
-                      <span class="btn btn-default jsMessageDetail">Detail <i class="fa fa-angle-double-right"></i></span>
+                      <span class="btn btn-default jsMessageDetail" data-toggle="modal" data-target=".messageDetailBox">Detail <i class="fa fa-angle-double-right"></i></span>
                     </div>
                   </div>
                 </div>
@@ -633,26 +637,19 @@
         </div>
         <!-- /page content -->
         <div id="modal">
-          <div class="modal-box" id="messageViewBox">
-            <div class="col-md-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Message <small>View messages</small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
+          <div class="modal fade messsageViewBox" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">OR000107337 - Messages</h4>
                 </div>
-                <div class="x_content">
+                <form>
+                <div class="modal-body">
                   <div class="row">
                     <div class="inbox-body">
-                      <div class="mail_heading row">
-                        <div class="col-md-12">
-                          <h4> Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum.</h4>
-                        </div>
-                      </div>
                       <div class="user-left text-left">
                         <div class="sender-info">
                           <div class="row">
@@ -753,236 +750,259 @@
                             <a href="#">Download all attachments</a> |
                             <a href="#">View all images</a>
                           </p>
-                          <ul>
-                            <li>
-                              <a href="#" class="atch-thumb">
-                                <img src="images/inbox.png" alt="img">
-                              </a>
-
-                              <div class="file-name">
-                                image-name.jpg
-                              </div>
-                              <span>12KB</span>
-
-
-                              <div class="links">
-                                <a href="#">View</a> -
-                                <a href="#">Download</a>
-                              </div>
-                            </li>
-
-                            <li>
-                              <a href="#" class="atch-thumb">
-                                <img src="images/inbox.png" alt="img">
-                              </a>
-
-                              <div class="file-name">
-                                img_name.jpg
-                              </div>
-                              <span>40KB</span>
-
-                              <div class="links">
-                                <a href="#">View</a> -
-                                <a href="#">Download</a>
-                              </div>
-                            </li>
-                            <li>
-                              <a href="#" class="atch-thumb">
-                                <img src="images/inbox.png" alt="img">
-                              </a>
-
-                              <div class="file-name">
-                                img_name.jpg
-                              </div>
-                              <span>30KB</span>
-
-                              <div class="links">
-                                <a href="#">View</a> -
-                                <a href="#">Download</a>
-                              </div>
-                            </li>
-
-                          </ul>
                         </div>
                       </div>
-                      <form>
+                      
                         <div class="margin-bottom-10">
                           <label for="message">Message :</label>
                             <textarea id="message" required="required" class="form-control" name="message"></textarea>
-                        </div>
+                        </div><!-- 
                         <div class="btn-group">
                           <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-reply"></i> Reply</button>
-                        </div>
-                      </form>
+                        </div> -->
                     </div>
                   </div>
                 </div>
-                <div class="clearfix"></div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary"><i class="fa fa-reply"></i> Reply</button>
+                </div>
+              </form>
               </div>
             </div>
-          </div>          
-          <div class="modal-box" id="messageDetailBox">
-            <div class="col-md-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Dream Detail <small>View dream detail</small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <section class="content invoice">
-                      <!-- title row -->
-                      <div class="row">
-                        <div class="col-xs-12 invoice-header">
-                          <h1>
-                                          <i class="fa fa-globe"></i> Invoice.
-                                          <small class="pull-right">Date: 16/08/2016</small>
-                                      </h1>
-                        </div>
-                        <div class="clearfix"></div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- info row -->
-                      <div class="row invoice-info">
-                        <div class="col-sm-4 invoice-col">
-                          From
-                          <address>
-                                          <strong>Iron Admin, Inc.</strong>
-                                          <br>795 Freedom Ave, Suite 600
-                                          <br>New York, CA 94107
-                                          <br>Phone: 1 (804) 123-9876
-                                          <br>Email: ironadmin.com
-                                      </address>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-4 invoice-col">
-                          To
-                          <address>
-                                          <strong>John Doe</strong>
-                                          <br>795 Freedom Ave, Suite 600
-                                          <br>New York, CA 94107
-                                          <br>Phone: 1 (804) 123-9876
-                                          <br>Email: jon@ironadmin.com
-                                      </address>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-4 invoice-col">
-                          <b>Invoice #007612</b>
-                          <br>
-                          <br>
-                          <b>Order ID:</b> 4F3S8J
-                          <br>
-                          <b>Payment Due:</b> 2/22/2014
-                          <br>
-                          <b>Account:</b> 968-34567
-                        </div>
+          </div>
+          <div class="modal fade messageDetailBox" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
 
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">OR000107337 - Order Detail</h4>
+                </div>
+                <div class="modal-body">
+                  <section class="content invoice">
+                      
+                      <div class="row invoice-info">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                          <div class="x_panel" style="padding-top: 0;">
+                            <div class="x_title bg-danger" style="padding-left: 25px;margin-right: -18px; margin-left: -18px; padding-top: 6px">
+                              <h2><i class="fa fa-cog"></i> Order Details</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" style="display: block;">
+                            <div class="row">
+                              <div class="col-md-6">
+                                Order <b>#</b> <br>
+                                Order Date &amp; Time <br>
+                                Order Status <br>
+                                Amount To Be Paid <br>
+                                Timeline <br>
+                                Transaction No <br>
+                              </div>
+                              <div class="col-md-6">
+                                <b>OR000107337</b><br>
+                                <b>28/04/2017 13:57 </b><br>
+                                <span class="label label-primary" style="font-size: 90%;">Payment Confirmed</span> <br>
+                                <b>20 000.00</b> <br>
+                                <b>7/05/2017 13:57 </b><br>
+                                <i class="fa fa-file-photo-o"></i>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                          <div class="x_panel" style="padding-top: 0;">
+                            <div class="x_title bg-success" style="padding-left: 25px;margin-right: -18px; margin-left: -18px; padding-top: 6px">
+                              <h2><i class="fa fa-cog"></i> Account Information</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" style="display: block;">
+                            <div class="row">
+                              <div class="col-md-6">
+                                Beneficiary Name <br>
+                                Account No <br>
+                                Bank Name <br>
+                                Account Name <br>
+                                Bank Identification Code <br>
+                              </div>
+                              <div class="col-md-6">
+                                <b>Solo Chima</b><br>
+                                <b>6015331507</b><br>
+                                <b>Access Bank</b> <br>
+                                <b>Oshenyi Solomon Chima</b> <br>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="x_panel" style="padding-top: 0;">
+                            <div class="x_title bg-warning" style="padding-left: 25px;margin-right: -18px; margin-left: -18px; padding-top: 6px">
+                              <h2><i class="fa fa-cog"></i> Recipient Information</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" style="display: block;">
+                            <div class="row">
+                              <div class="col-md-6">
+                                Name <br>
+                                Phone No <br>
+                                Guilder <br>
+                                Phone No <br>
+                                Referrer <br>
+                                Phone<br>
+                              </div>
+                              <div class="col-md-6">
+                                <b>Solo Chima</b><br>
+                                <b>6015331507</b><br>
+                                <b>Solo Chima</b><br>
+                                <b>6015331507</b><br>
+                                <b>Solo Chima</b><br>
+                                <b>6015331507</b><br>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="x_panel" style="padding-top: 0;">
+                            <div class="x_title bg-info" style="padding-left: 25px;margin-right: -18px; margin-left: -18px; padding-top: 6px">
+                              <h2><i class="fa fa-cog"></i> Sender Information</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" style="display: block;">
+                            <div class="row">
+                              <div class="col-md-6">
+                                Name <br>
+                                Phone No <br>
+                                Guilder <br>
+                                Phone No <br>
+                                Referrer <br>
+                                Phone<br>
+                              </div>
+                              <div class="col-md-6">
+                                <b>Solo Chima</b><br>
+                                <b>6015331507</b><br>
+                                <b>Solo Chima</b><br>
+                                <b>6015331507</b><br>
+                                <b>Solo Chima</b><br>
+                                <b>6015331507</b><br>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
                         <!-- /.col -->
                       </div>
                       <!-- /.row -->
                     </section>
                 </div>
-                <div class="clearfix"></div>
               </div>
             </div>
-          </div>          
-          <div class="modal-box" id="crBox">
-            <div class="col-md-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Create Dreams <small>build your dream</small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <section class="content invoice">
-                    <form>
-                      <p class="lead">Enter convient amount to create dream:</p>
-                      <div class="clearfix"></div>
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Amount">
-                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-                      </div>
-                      <div class="clearfix"></div>
-                      <br>
-                      <div class="row">
-                        <!-- accepted payments column -->
-                        <div class="col-xs-6">
-                          <p class="lead">Payment Methods:</p>
-                          <img src="images/visa.png" alt="Visa">
-                          <img src="images/mastercard.png" alt="Mastercard">
-                          <img src="images/american-express.png" alt="American Express">
-                          <img src="images/paypal.png" alt="Paypal">
-                          <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
-                          </p>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-xs-6">
-                          <p class="lead">Dream Summary</p>
-                          <div class="table-responsive">
-                            <table class="table">
-                              <tbody>
-                                <tr>
-                                  <th style="width:50%">Dream:</th>
-                                  <td>$250.30</td>
-                                </tr>
-                                <tr>
-                                  <th>Bonus</th>
-                                  <td>$10.34</td>
-                                </tr>
-                                <tr>
-                                  <th>Total Dream:</th>
-                                  <td>$265.24</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" value="agree" id="optionsRadios1" name="optionsRadios" required=""> I fully understand all the risk, i make decision to participate being of sound mind and memory.
-                        </label>
-                      </div>
-                      <!-- /.row -->
+          </div>  
+          <div class="modal fade crBox" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
 
-                      <!-- this row will not appear when printing -->
-                      <div class="row no-print">
-                        <div class="col-xs-12">
-                          <button class="btn btn-success"><i class="fa fa-credit-card"></i> Create dream</button>
-                        </div>
-                      </div>
-                    </form>
-                  </section>
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">Create Dream</h4>
                 </div>
+                <form>
+                  <div class="modal-body">
+                    <section class="content invoice">
+                        <p class="lead">Enter convient amount to create dream:</p>
+                        <div class="clearfix"></div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                          <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Amount">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
+                        <div class="row">
+                          <!-- accepted payments column -->
+                          <div class="col-xs-6">
+                            <p class="lead">Payment Methods:</p>
+                            <img src="images/visa.png" alt="Visa">
+                            <img src="images/mastercard.png" alt="Mastercard">
+                            <img src="images/american-express.png" alt="American Express">
+                            <img src="images/paypal.png" alt="Paypal">
+                            <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                              Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                            </p>
+                          </div>
+                          <!-- /.col -->
+                          <div class="col-xs-6">
+                            <p class="lead">Dream Summary</p>
+                            <div class="table-responsive">
+                              <table class="table">
+                                <tbody>
+                                  <tr>
+                                    <th style="width:50%">Dream:</th>
+                                    <td>$250.30</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Bonus</th>
+                                    <td>$10.34</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Total Dream:</th>
+                                    <td>$265.24</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <!-- /.col -->
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="agree" id="optionsRadios1" name="optionsRadios" required=""> I fully understand all the risk, i make decision to participate being of sound mind and memory.
+                          </label>
+                        </div>
+                        <!-- /.row -->
+                    </section>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-credit-card"></i> Create</button>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>          
-          <div class="modal-box" id="clBox">
-            <div class="col-md-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Claim Dream <small>Actualize your dream</small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                   
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
+          </div>  
+          <div class="modal fade clBox" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">Claim Dream</h4>
                 </div>
-                <div class="x_content">
+                <form>
+                <div class="modal-body">
                   <section class="content invoice">
-                    <form>
+                    
                       <p class="lead">Enter amount to claim dream:</p>
                       <div class="col-sm-4 invoice-col">
                         Withdrawal currency: NGN<br>
@@ -1034,19 +1054,36 @@
                         <!-- /.col -->
                       </div>
                       <!-- /.row -->
-
-                      <!-- this row will not appear when printing -->
-                      <div class="row no-print">
-                        <div class="col-xs-12">
-                          <button class="btn btn-success"><i class="fa fa-credit-card"></i> Claim dream</button>
-                        </div>
-                      </div>
-                    </form>
+                    
                   </section>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary"><i class="fa fa-credit-card"></i> Claim</button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>    
+          <div class="modal fade reCad" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">Re-Cad</h4>
+                </div>
+                <div class="modal-body">
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Re-Cad</button>
                 </div>
               </div>
             </div>
-          </div>          
+          </div>                 
         </div>
         <!-- footer content -->
         <footer>
@@ -1070,19 +1107,19 @@
     <!-- Chart.js -->
     <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- gauge.js -->
-    <!-- <script src="../vendors/gauge.js/dist/gauge.min.js"></script> -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <!-- <script src="../vendors/iCheck/icheck.min.js"></script> -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- Skycons -->
-    <!-- <script src="../vendors/skycons/skycons.js"></script> -->
+    <script src="../vendors/skycons/skycons.js"></script>
     <!-- Flot -->
-    <!-- <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.js"></script>
     <script src="../vendors/Flot/jquery.flot.pie.js"></script>
     <script src="../vendors/Flot/jquery.flot.time.js"></script>
     <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script> -->
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
     <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
     <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>

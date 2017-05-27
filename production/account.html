@@ -213,9 +213,9 @@
         <div class="right_col" role="main">
           <!-- top tiles -->
            <div class="row content-header">
-            <h1>Account
+            <h3>Account
               <small>View Accounts</small>
-            </h1>
+            </h3>
             <ol class="breadcrumb">
               <li><a href="index.html"><i class="fa fa-dashboard"></i> Home</a></li>
               <li class="active">Account</li>
@@ -229,6 +229,93 @@
               </div>
             </div>
           </div>
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="row ">
+                <div class="">
+
+                  <!-- modals -->
+                  <!-- Large modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".add_account">Add new account</button>
+
+                  <div class="modal fade add_account" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title" id="myModalLabel">Add new acccount</h4>
+                        </div>
+                        <form >
+                          <div class="modal-body">
+                            <div class="row">
+                              <p class="text-muted well well-sm no-shadow">
+                                <strong>Referral Link: </strong><a href="http://empoweredearners.com/rp/2133243553">http://empoweredearners.com/rp/2133243553</a>
+                              </p>
+                            </div>
+                            <div class="row form-horizontal form-label-left">
+                              <div class="form-group">
+                                <label class="col-md-3 col-sm-3 col-xs-12 control-label">Account Type</label>
+
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> Bitcoin
+                                    </label> &nbsp;&nbsp;&nbsp;
+                                    <label>
+                                      <input type="radio" checked="" value="option1" id="optionsRadios2" name="optionsRadios"> Bank Account
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Bitcoin Wallet address: </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" placeholder="1Fgkje546djcnnckYGF47GHHNuop3Weq">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Confirm Bitcoin Wallet address: </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" placeholder="1Fgkje546djcnnckYGF47GHHNuop3Weq">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Account Name: </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Wallet Name: </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" >
+                                  <small class="text-navy">Blockchian, Coinbase, Electrum, Luno Etc</small>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Additional Info</label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                  <textarea class="form-control"></textarea>
+                                  <br>
+                                  <strong class="text-navy">ATTENTION: You are only permitted to add your own bank details</strong>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
 
           <!-- /top tiles -->
           <div class="clearfix"></div>
@@ -261,9 +348,8 @@
 						    	<form style="display: inline-block">
 						    		<button class="btn btn-default fa fa-close"></button>	
 						    	</form>
-						    	<form style="display: inline-block">
-						    		<button class="btn btn-default fa fa-edit"></button>
-						    	</form>						    	
+						    	<button class="btn btn-default fa fa-edit" style="vertical-align: top" data-toggle="modal" data-target=".edit_account"></button>
+						    							    	
 						    </td>
 						  </tr>
 						  <tr>
@@ -275,11 +361,9 @@
 						    <td>NGN: Nigerian Naira</td>
 						    <td>
 						    	<form style="display: inline-block">
-						    		<button class="btn btn-default fa fa-close"></button>	
-						    	</form>
-						    	<form style="display: inline-block">
-						    		<button class="btn btn-default fa fa-edit"></button>
-						    	</form>						    	
+                    <button class="btn btn-default fa fa-close"></button> 
+                  </form>
+                  <button class="btn btn-default fa fa-edit" style="vertical-align: top" data-toggle="modal" data-target=".edit_account"></button>					    	
 						    </td>
 						  </tr>
 						  <tr>
@@ -291,11 +375,9 @@
 						    <td>NGN: Nigerian Naira</td>
 						    <td>
 						    	<form style="display: inline-block">
-						    		<button class="btn btn-default fa fa-close"></button>	
-						    	</form>
-						    	<form style="display: inline-block">
-						    		<button class="btn btn-default fa fa-edit"></button>
-						    	</form>						    	
+                    <button class="btn btn-default fa fa-close"></button> 
+                  </form>
+                  <button class="btn btn-default fa fa-edit" style="vertical-align: top" data-toggle="modal" data-target=".edit_account"></button>					    	
 						    </td>
 						  </tr>
 						</tbody>
@@ -305,6 +387,83 @@
           	</div>
           </div>
 
+        </div>
+        <div id="modal">
+          <div class="modal fade edit_account" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">Edit acccount</h4>
+                </div>
+                <form >
+                  <div class="modal-body">
+                    <div class="row">
+                      <p class="text-muted well well-sm no-shadow">
+                        <strong>Referral Link: </strong><a href="http://empoweredearners.com/rp/2133243553">http://empoweredearners.com/rp/2133243553</a>
+                      </p>
+                    </div>
+                    <div class="row form-horizontal form-label-left">
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Account Type</label>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> Bitcoin
+                            </label> &nbsp;&nbsp;&nbsp;
+                            <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios2" name="optionsRadios"> Bank Account
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Bitcoin Wallet address: </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" placeholder="1Fgkje546djcnnckYGF47GHHNuop3Weq">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Confirm Bitcoin Wallet address: </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" placeholder="1Fgkje546djcnnckYGF47GHHNuop3Weq">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Account Name: </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Wallet Name: </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" >
+                          <small class="text-navy">Blockchian, Coinbase, Electrum, Luno Etc</small>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Additional Info</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <textarea class="form-control"></textarea>
+                          <br>
+                          <strong class="text-navy">ATTENTION: You are only permitted to add your own bank details</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
         </div>
         <!-- /page content -->
 
@@ -330,19 +489,19 @@
     <!-- Chart.js -->
     <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- gauge.js -->
-    <!-- <script src="../vendors/gauge.js/dist/gauge.min.js"></script> -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <!-- <script src="../vendors/iCheck/icheck.min.js"></script> -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- Skycons -->
-    <!-- <script src="../vendors/skycons/skycons.js"></script> -->
+    <script src="../vendors/skycons/skycons.js"></script>
     <!-- Flot -->
-    <!-- <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.js"></script>
     <script src="../vendors/Flot/jquery.flot.pie.js"></script>
     <script src="../vendors/Flot/jquery.flot.time.js"></script>
     <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script> -->
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
     <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
     <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>

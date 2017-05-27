@@ -4383,8 +4383,8 @@ ul.notifications {
     padding-bottom: 10px;
 }
 .vocational-item h4 {
-    font-size: 16px;
-    min-height: 60px;
+    font-size: 14px;
+    min-height: 55px;
 }
 .vocational-item:last-of-type {
     border-right: none;
@@ -4507,17 +4507,17 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 }
 
 .profile_left {
-    text-align: center;
+    text-align: left;
 }
 
 .profile_img img {
     margin: 0 auto;
 }
 #modal {
-    position: absolute;
+    /*position: absolute;
     top: 200px;
     width: 100%;
-    z-index: 9;
+    z-index: 9;*/
 }
 #modal .panel_toolbox > li {
     float: right;
